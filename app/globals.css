@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* To change the theme colors, change the values below
+  or use the "Copy code" button at https://ui.shadcn.com/themes */
+@layer base {
+  :root {
+    --background: 35 25% 96%;
+    --foreground: 20 14.3% 4.1%;
+    --card: 35 25% 96%;
+    --card-foreground: 20 14.3% 4.1%;
+    --popover: 35 25% 96%;
+    --popover-foreground: 20 14.3% 4.1%;
+    --primary: 22 85% 25%;
+    --primary-foreground: 35 25% 96%;
+    --secondary: 35 25% 85%;
+    --secondary-foreground: 22 85% 25%;
+    --muted: 30 15% 90%;
+    --muted-foreground: 25 5.3% 44.7%;
+    --accent: 43 60% 75%;
+    --accent-foreground: 22 85% 25%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 35 25% 96%;
+    --border: 35 30% 80%;
+    --border-tan: 35 35% 75%;
+    --border-sage: 95 20% 75%;
+    --border-wood: 25 40% 70%;
+    --input: 35 30% 80%;
+    --ring: 22 85% 25%;
+    --chart-1: 22 75% 45%;
+    --chart-2: 43 70% 55%;
+    --chart-3: 15 65% 35%;
+    --chart-4: 35 80% 45%;
+    --chart-5: 28 75% 50%;
+    --radius: 0.5rem;
+    --sidebar-background: 35 25% 96%;
+    --sidebar-foreground: 25 5.3% 44.7%;
+    --sidebar-primary: 22 85% 25%;
+    --sidebar-primary-foreground: 35 25% 96%;
+    --sidebar-accent: 43 60% 75%;
+    --sidebar-accent-foreground: 22 85% 25%;
+    --sidebar-border: 30 15% 85%;
+    --sidebar-ring: 22 85% 25%;
+    --bg-wood-light: 25 40% 92%;
+    --bg-sage-light: 95 20% 92%;
+    --bg-tan-light: 35 35% 92%;
+    --bg-gradient-wood: 25 70% 45%;
+    --bg-gradient-sage: 95 25% 45%;
+    --bg-gradient-tan: 35 60% 55%;
+  }
+  .dark {
+    --background: 20 14.3% 8%;
+    --foreground: 35 25% 96%;
+    --card: 20 14.3% 8%;
+    --card-foreground: 35 25% 96%;
+    --popover: 20 14.3% 8%;
+    --popover-foreground: 35 25% 96%;
+    --primary: 43 60% 65%;
+    --primary-foreground: 20 14.3% 8%;
+    --secondary: 25 15% 20%;
+    --secondary-foreground: 43 60% 65%;
+    --muted: 25 15% 20%;
+    --muted-foreground: 30 15% 70%;
+    --accent: 35 55% 25%;
+    --accent-foreground: 43 60% 65%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 35 25% 96%;
+    --border: 35 25% 25%;
+    --border-tan: 35 30% 30%;
+    --border-sage: 95 15% 25%;
+    --border-wood: 25 35% 30%;
+    --input: 35 25% 25%;
+    --ring: 43 60% 65%;
+    --chart-1: 43 70% 65%;
+    --chart-2: 35 65% 55%;
+    --chart-3: 22 60% 45%;
+    --chart-4: 15 75% 50%;
+    --chart-5: 28 70% 60%;
+    --sidebar-background: 20 14.3% 8%;
+    --sidebar-foreground: 43 60% 65%;
+    --sidebar-primary: 43 60% 65%;
+    --sidebar-primary-foreground: 20 14.3% 8%;
+    --sidebar-accent: 35 55% 25%;
+    --sidebar-accent-foreground: 43 60% 65%;
+    --sidebar-border: 25 15% 20%;
+    --sidebar-ring: 43 60% 65%;
+    --bg-wood-dark: 25 35% 15%;
+    --bg-sage-dark: 95 15% 15%;
+    --bg-tan-dark: 35 30% 15%;
+    --bg-gradient-wood: 25 45% 35%;
+    --bg-gradient-sage: 95 20% 35%;
+    --bg-gradient-tan: 35 40% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  .border-tan {
+    border-color: hsl(var(--border-tan));
+  }
+  .border-sage {
+    border-color: hsl(var(--border-sage));
+  }
+  .border-wood {
+    border-color: hsl(var(--border-wood));
+  }
+  .bg-wood {
+    background-color: hsl(var(--bg-wood-light));
+  }
+  .dark .bg-wood {
+    background-color: hsl(var(--bg-wood-dark));
+  }
+  .bg-sage {
+    background-color: hsl(var(--bg-sage-light));
+  }
+  .dark .bg-sage {
+    background-color: hsl(var(--bg-sage-dark));
+  }
+  .bg-tan {
+    background-color: hsl(var(--bg-tan-light));
+  }
+  .dark .bg-tan {
+    background-color: hsl(var(--bg-tan-dark));
+  }
+  .bg-gradient-wood {
+    background-image: linear-gradient(to right, hsl(var(--bg-gradient-wood)), hsl(var(--bg-gradient-wood) / 0.8));
+  }
+  .bg-gradient-sage {
+    background-image: linear-gradient(to right, hsl(var(--bg-gradient-sage)), hsl(var(--bg-gradient-sage) / 0.8));
+  }
+  .bg-gradient-tan {
+    background-image: linear-gradient(to right, hsl(var(--bg-gradient-tan)), hsl(var(--bg-gradient-tan) / 0.8));
+  }
+}
